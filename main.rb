@@ -5,7 +5,7 @@ require "sinatra/reloader"
 get "/" do
   step = params[:step].to_i
   answer = params[:answer]
-
+# massive string of stuff happens:
   @step = 1
   @question = "<p>1. Do you have a test for that?</p>"
   @yesno = true
