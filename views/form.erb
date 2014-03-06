@@ -1,0 +1,15 @@
+<%= @question %>
+<% if @yesno %>
+  <a class="question yes" href="?step=<%= @step %>&answer=yes">Yes</a>
+  <a class="question no" href="?step=<%= @step %>&answer=no">No</a>
+<% end %>
+
+<!--
+# <form action="/" method="get">
+#   <label for="answer"><%= @question %></label>
+#   <input type="radio" id="answer" name="yesno" value="yes">yes
+#   <input type="radio" id="answer" name="yesno" value="no" checked>no
+#   <button>submit button</button>
+#   <input type="submit" class="button" value="GO!">
+# </form>
+-->
