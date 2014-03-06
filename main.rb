@@ -2,14 +2,20 @@ require "pry"
 require "sinatra"
 require "sinatra/reloader"
 
+# everything happens at /
 get "/" do
+
+#get parameters from the URL - two params, just step and answer
   step = params[:step].to_i
   answer = params[:answer]
-# massive string of stuff happens:
+
+#setup initial variables
   @step = 1
   @question = "<p>1. Do you have a test for that?</p>"
   @yesno = true
 
+#do the correct thing according to what 'step' you are up to
+#generally - update the variables to something new each time
   case step
   when 1
     if answer == "yes"
@@ -42,23 +48,22 @@ get "/" do
       @yesno = false
     end
   end
-
-  
+  # at the end serve up the form with the correct options/questions 
   erb :form
   # later - @id = params[:id]
 end
 
+# this all should flow like this:
 
 # Do you have a test for that?
-
-# if ?test=yes
+# if test=yes
 # /pass = Does the test pass?
 # if no
 # /pass write a test [done]
 # /pass = does the test pass?
 
 # Does the test pass?
-# if yes
+# if pass = yes
 # /refactor = Need to refactor?
 # if no Write just enough code for the test to pass.
 # /pass = does the test pass?

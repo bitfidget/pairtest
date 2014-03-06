@@ -7,6 +7,15 @@ body{
   text-transform: uppercase;
   font-weight: bold;
   padding: 30px;
+  background: url(http://3t2013-14.sasblogs.net/wp-content/uploads/sites/32/2014/01/How-to-Calm-Down-Your-Mind-3.jpg) no-repeat;
+  background-size: cover;
+}
+p{
+  background: rgba(46,99,138,0.5);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 270px;
+  margin: 10px auto;
 }
 a{
   color: green;
@@ -16,6 +25,11 @@ a{
 a:hover{
   text-decoration: none;
   color: #FFF;
+}
+#container{
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10% 0 0 250px;
 }
 a.restart{
   font-size: 12px;
@@ -28,6 +42,7 @@ a.restart{
   text-decoration: none;
   color: #FFF;
   border-radius: 10px;
+  width: 70px;
 }
 .question:hover{
   background: #333;
@@ -37,4 +52,10 @@ a.restart{
 }
 .no{
   background: red;
+}
+@media screen and (max-width: 600px){
+#container{
+  width: 90%;
+  padding: 0;
+}
 }
